@@ -43,9 +43,9 @@ architecture ALU1 of main is
 	signal results: std_logic_vector(15 downto 0);
 	signal sel: std_logic_vector(3 downto 0);
 begin
-		sel(1) <= not op(1) and op(2);
-		sel(2) <= op(1) and not op(2);
-		sel(3) <= op(1) and op(2);
+		sel(1) <= not op(0) and op(1);
+		sel(2) <= op(0) and not op(1);
+		sel(3) <= op(0) and op(1);
 	
 		adder_4: add_4_bits port map(a, b, '0', results(7 downto 4));
 		inc_4: 	add_4_bits port map(a, b"0001", '0', results(11 downto 8));

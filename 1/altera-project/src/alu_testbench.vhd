@@ -22,7 +22,7 @@ architecture main_testbench_arch of main_testbench is
 	for test4: main use entity work.main(ALU4);
 	for test5: main use entity work.main(ALU5);
 	
-	signal test: std_logic_vector(9 downto 0);
+	signal test: std_logic_vector(9 downto 0) := b"0000000000";
 	signal c: std_logic_vector(19 downto 0);
 begin
 	test1: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(3 downto 0));
@@ -31,7 +31,9 @@ begin
 	test4: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(15 downto 12));
 	test5: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(19 downto 16));
 	
-	process begin
-		test <= test + 1 after 10 ns;
+	
+	main_testbench: process begin
+			test <= test + 1;
+			wait for 5 ps;
 	end process;
 end main_testbench_arch;
