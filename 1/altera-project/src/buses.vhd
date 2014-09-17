@@ -31,7 +31,7 @@ entity busmux4x4 is
 		);
 end;
 architecture logic of busmux4x4 is
-	component busmux
+	component busgate4
 		port( 
 		in_bus: in std_logic_vector(3 downto 0);
 		is_enabled: in std_logic;
@@ -41,9 +41,10 @@ architecture logic of busmux4x4 is
 	
 	signal internal_bus: std_logic_vector(15 downto 0);
 begin
-	cell1: busmux port map (in_bus=>in_bus(3 downto 0), is_enabled=>sel(0), out_bus=>internal_bus(3 downto 0));
-	cell2: busmux port map (in_bus=>in_bus(7 downto 4), is_enabled=>sel(1), out_bus=>internal_bus(7 downto 4));
-	cell3: busmux port map (in_bus=>in_bus(11 downto 8), is_enabled=>sel(2), out_bus=>internal_bus(11 downto 8));
-	cell4: busmux port map (in_bus=>in_bus(15 downto 12), is_enabled=>sel(3), out_bus=>internal_bus(15 downto 12));
+	cell1: busgate4 port map (in_bus=>in_bus(3 downto 0), is_enabled=>sel(0), out_bus=>internal_bus(3 downto 0));
+	cell2: busgate4 port map (in_bus=>in_bus(7 downto 4), is_enabled=>sel(1), out_bus=>internal_bus(7 downto 4));
+	cell3: busgate4 port map (in_bus=>in_bus(11 downto 8), is_enabled=>sel(2), out_bus=>internal_bus(11 downto 8));
+	cell4: busgate4 port map (in_bus=>in_bus(15 downto 12), is_enabled=>sel(3), out_bus=>internal_bus(15 downto 12));
 	out_bus <= internal_bus(3 downto 0) or internal_bus(7 downto 4) or internal_bus(11 downto 8) or internal_bus(15 downto 12);
+	
 end logic;

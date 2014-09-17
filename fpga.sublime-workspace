@@ -1,0 +1,496 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"polus",
+				"polus_value"
+			],
+			[
+				"polus_",
+				"polus_number"
+			],
+			[
+				"bus",
+				"busmux4x4_arch"
+			],
+			[
+				"CURRE",
+				"CURRENT_DATE"
+			],
+			[
+				"disp",
+				"display"
+			],
+			[
+				"end",
+				"end_addr"
+			],
+			[
+				"dos",
+				"doshift_s3"
+			],
+			[
+				"wb_re",
+				"wb_regwrite"
+			],
+			[
+				"w",
+				"wb_regwrite"
+			],
+			[
+				"d_mem",
+				"d_mem_ready"
+			],
+			[
+				"d_mem_",
+				"d_mem_addr"
+			],
+			[
+				"id_re",
+				"id_regrs"
+			],
+			[
+				"ex_",
+				"ex_aluctl"
+			],
+			[
+				"ex_alu",
+				"ex_aluctl"
+			],
+			[
+				"ex_al",
+				"ex_alub"
+			],
+			[
+				"mem_mem",
+				"mem_memread"
+			],
+			[
+				"mem_m",
+				"mem_memwrite"
+			],
+			[
+				"DATA",
+				"DATA_WIDTH-1"
+			],
+			[
+				"CLK",
+				"CLK_DIVIDER_VALUE"
+			],
+			[
+				"in",
+				"_internal_clk"
+			],
+			[
+				"PER",
+				"PERIPH_ADDR_WIDTH"
+			],
+			[
+				"inter",
+				"internal_clk"
+			],
+			[
+				"A",
+				"ADDR_SPACE_SIZE"
+			],
+			[
+				"g_",
+				"g_leds"
+			],
+			[
+				"io_data",
+				"io_data_reg"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 404.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: IN",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: INSTALL",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 552.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/denis/projects/bsuir/9/FPGA",
+		"/home/denis/projects/bsuir/9/FPGA/1",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src",
+		"/home/denis/projects/bsuir/9/FPGA/2",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project"
+	],
+	"file_history":
+	[
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main_tb2.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/buses.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main_tb.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/work/main_testbench/main_testbench_arch.dat",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/Makefile",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/vsim.do",
+		"/home/denis/projects/bsuir/9/Diagnositc/2.py",
+		"/home/denis/projects/bsuir/9/Diagnositc/1.py",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/src/alu_testbench.vhd",
+		"/home/denis/.config/openbox/autostart",
+		"/home/denis/tmp/lesson2.c",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/Vhdl1.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/src/adder.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/1/altera-project/simulation/modelsim/main_tb.vwf.vt",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/mips-cpu_nativelink_simulation.rpt",
+		"/home/denis/Вопросы",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/Lowfreq_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/SobelFilterImage_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/OpenCLEngine.hpp",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/GUI.hpp",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/Noise_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/CLGLSharing/Median_Kernels.cl",
+		"/home/denis/cylinder.wrl",
+		"/mnt/laptop-home/Projects/bsuir/ot/supply_meter/db.sql",
+		"/mnt/laptop-home/Projects/bsuir/ot/supply_meter/generate_database.sh",
+		"/mnt/laptop-home/Projects/bsuir/ot/oproseh/trunk/generate_database.sh",
+		"/mnt/laptop-home/Projects/bsuir/ot/oproseh/trunk/db.sql",
+		"/mnt/laptop-home/Projects/bsuir/ot/oproseh/trunk/documentation/software_requirements.txt",
+		"/mnt/laptop-home/Projects/bsuir/ot/supply_meter/utility/1.csv",
+		"/mnt/laptop-home/Projects/bsuir/ot/supply_meter/db.old.sql",
+		"/mnt/laptop-home/Projects/bsuir/ot/supply_meter/db_dump.sql",
+		"/home/denis/first",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/SobelFilter/GLSobelFilter/Median_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/clinfo/clinfo.c",
+		"/mnt/laptop-home/Projects/bsuir/lansw/mpi_simple/mpi-peer.c",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/cpu.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/README.md",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/pc.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/iobus.v",
+		"/mnt/laptop-home/Documents/Documents/hna/paysadd/add_pays.py",
+		"/home/denis/Летние сборы.txt",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-branch/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/periph_lg3641bh.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/100-finatest/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/soc.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/constants.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.as",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/14-display/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/periph_leds.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ioctrl.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im_cached.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/control.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/08-lw_sw/main.asm",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/regm.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/Makefile",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/alu.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ioslot.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/cmd.py",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/mem_converter.py",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im.as",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/alu_control.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im_data.as",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/leds_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im_data.hex-commented",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/spliter.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/dm.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/dm_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/rdecode.py",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/itype.py",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/08-lw_sw/im_data.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/main.asm",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/main_tb.check",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.out",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.check",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/im_data.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/im_data.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/prepare.sh",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-operators/im_data.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/prepare",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/soc_tb.v",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/bin/gen_cpu_tb",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/bin/gen_soc_tb",
+		"/opt/AMDAPP/SDK/samples/opencl/cl/SimpleImage/SimpleImage_Kernels.cl",
+		"/home/denis/ciso.txt",
+		"/opt/AMDAPP/SDK/samples/opencl/bin/GaussianNoise_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/URNGNoiseGL_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/URNGNoiseGL_Kernels.cl",
+		"/opt/AMDAPP/SDK/samples/opencl/bin/BlackScholes_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/CMakeLists.txt",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/MediaFilter.config",
+		"/home/denis/tmp/cpp_cl/GaussianNoise/CMakeLists.txt",
+		"/home/denis/tmp/cpp_cl/SobelFilterImage/SobelFilterImage_Kernels.cl",
+		"/opt/AMDAPP/SDK/samples/opencl/cl/SimpleGL/SimpleGL_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/Makefile",
+		"/mnt/laptop-home/Documents/Documents/bsuir/Защита_населения/schematic/devices.lib",
+		"/usr/local/bin/gpu_switch",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianFilter/filtermedian.cpp",
+		"/home/denis/3dsamples/NormalTest.mail",
+		"/mnt/laptop-home/Projects/QT/Hawk/samples/NormalTest.mail",
+		"/mnt/laptop-home/Cisco/PacketTracer601/set_ptenv.sh",
+		"/mnt/laptop-home/virtual_images/WindowsServer_2008_1.txt",
+		"/opt/AMDAPP/SDK/samples/opencl/cpp_cl/GaussianNoise/GaussianNoise_Kernels.cl",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/MediaFilter.creator",
+		"/opt/AMDAPP/SDK/samples/opencl/cl/FluidSimulation2D/FluidSimulation2D_Kernels.cl",
+		"/home/denis/OpenWRT_Notes.txt",
+		"/home/denis/.enc/rc",
+		"/home/denis/3dsamples/Cone.mail",
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianFilter/pngwrapper.h",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-branch/main.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-branch/main.asm",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-no_hazard/main.asm",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-no_hazard/main.hex",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/soc_tb",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ISA.txt",
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-operators/main.hex"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"IMAGE_SUPPORT",
+			"pcsrc",
+			"branch_flush",
+			"127",
+			"leds_",
+			"clk",
+			"data1_s3",
+			"alusrc_data1",
+			"regdst",
+			"shamt",
+			"alusrc",
+			"shamt",
+			"aluop",
+			"seim",
+			"shamt",
+			"mem_memread",
+			"mem_memwrite",
+			"data1",
+			"mem_memdata",
+			"mem_addr",
+			"d_mem",
+			",",
+			"out",
+			"rdata",
+			"mem",
+			"mem_",
+			"OTAwZmM3",
+			"OPENCL_LIBRARIES",
+			"opencl_lib",
+			"image2d_t",
+			"read",
+			"ioslot_",
+			"47",
+			"ADDR_SPACE_SIZE",
+			"clk",
+			"parameter",
+			"leds_",
+			"51hk3p",
+			"lx",
+			"DATA_WIDE",
+			"ADDR_WIDE",
+			"wire",
+			"umach",
+			"x86_64",
+			"mode",
+			"linux_x8",
+			"vsim"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"display_",
+			"cpu_read",
+			"cpu_write",
+			"d_write",
+			"mem",
+			";",
+			"iobus_",
+			"PERIPH_ADDR_SPACE_SIZE",
+			"buttons_",
+			"DATA_WIDTH",
+			"ADDR_WIDTH",
+			"reg"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "fpga.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main.vd",
+				"main.vhd"
+			],
+			[
+				"main_tb",
+				"main_tb.vhd"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

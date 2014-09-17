@@ -42,15 +42,23 @@ architecture ALU1 of main is
 	
 	signal results: std_logic_vector(15 downto 0);
 	signal sel: std_logic_vector(3 downto 0);
+	signal b_inverted, b_additional: std_logic_vector(3 downto 0);
 begin
-		sel(1) <= not op(0) and op(1);
-		sel(2) <= op(0) and not op(1);
-		sel(3) <= op(0) and op(1);
-	
+		results(3 downto 0) <= b"0000";
 		adder_4: add_4_bits port map(a, b, '0', results(7 downto 4));
-		inc_4: 	add_4_bits port map(a, b"0001", '0', results(11 downto 8));
-		subber_4: add_4_bits port map(a, b, '0', results(15 downto 12));
-		result_busmux: busmux4x4 port map (results, sel, c);
+		additional_code_unit: add_4_bits port map(b_inverted, b"0001", '0', b_additional);
+		subber_4: add_4_bits port map(a, b_additional, '0', results(11 downto 8));
+		inc_4: 	add_4_bits port map(a, b"0001", '0', results(15 downto 12));
+		--results(15 downto 8) <= b"00000000";
+		
+		sel(0) <= not op(1) and not op(0);
+		sel(1) <= not op(1) and op(0);
+		sel(2) <= op(1) and not op(0);
+		sel(3) <= op(1) and op(0);
+
+		b_inverted <= not b;
+		
+		result_busmux: busmux4x4 port map (in_bus=>results, sel=>sel, out_bus=>c);
 end ALU1;
 
 -- A signal assignment statement represents a process that assigns values to signals. It has three basic formats.
