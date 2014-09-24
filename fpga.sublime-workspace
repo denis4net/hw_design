@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"client",
+				"clientSockfd"
+			],
+			[
+				"clie",
+				"clientSockfd"
+			],
+			[
 				"polus",
 				"polus_value"
 			],
@@ -107,6 +115,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "2/altera-project/src/memcell.vhd",
+			"settings":
+			{
+				"buffer_size": 811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "2/altera-project/src/main.do",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "2/altera-project/src/Makefile",
+			"settings":
+			{
+				"buffer_size": 302,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -177,12 +209,20 @@
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src",
 		"/home/denis/projects/bsuir/9/FPGA/2",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project"
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src"
 	],
 	"file_history":
 	[
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
+		"/home/denis/projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
+		"/home/denis/Projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
+		"/home/denis/Projects/bsuir/9/InformationSecurity/1/BruteForce/main.cpp",
+		"/home/denis/Downloads/main.cpp",
+		"/mnt/data/documents/Курсовой проект по экономике.txt",
+		"/tmp/socket.c",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main_tb2.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.do",
@@ -301,14 +341,7 @@
 		"/home/denis/OpenWRT_Notes.txt",
 		"/home/denis/.enc/rc",
 		"/home/denis/3dsamples/Cone.mail",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianFilter/pngwrapper.h",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-branch/main.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-branch/main.asm",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-no_hazard/main.asm",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-no_hazard/main.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/soc_tb",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ISA.txt",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-operators/main.hex"
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianFilter/pngwrapper.h"
 	],
 	"find":
 	{
@@ -405,6 +438,97 @@
 			"sheets":
 			[
 			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "2/altera-project/src/memcell.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "2/altera-project/src/main.do",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "2/altera-project/src/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
 		}
 	],
 	"incremental_find":
@@ -413,7 +537,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -424,11 +548,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.426859250154,
 			1.0
 		],
 		"rows":
@@ -480,7 +611,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

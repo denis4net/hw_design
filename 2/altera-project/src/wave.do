@@ -1,12 +1,16 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -radix hexadecimal -expand /main_testbench/test
-add wave -noupdate -radix hexadecimal -expand /main_testbench/c3
-add wave -noupdate -radix hexadecimal -expand /main_testbench/c4
-add wave -noupdate -radix hexadecimal -expand /main_testbench/c5
-add wave -noupdate -radix hexadecimal -expand /main_testbench/c2
-add wave -noupdate -radix hexadecimal -expand /main_testbench/c1
+add wave -noupdate -radix unsigned /testbench/test_data
+add wave -noupdate /testbench/NCCKEN
+add wave -noupdate /testbench/CCK
+add wave -noupdate /testbench/NCLOAD
+add wave -noupdate /testbench/RCK
+add wave -noupdate /testbench/NCCLR
+add wave -noupdate /testbench/NRCO
+add wave -noupdate /testbench/COUNTER80/COLLECTOR0/collector_bus
 TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -21,4 +25,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {691 ps}
+WaveRestoreZoom {5013 ps} {5210 ps}

@@ -3,33 +3,46 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 
-entity main_testbench is
-end main_testbench;
+entity testbench is
+begin
+end testbench;
 
-architecture main_testbench_arch of main_testbench is
-	component main
-		port (
-			a: in std_logic_vector(3 downto 0);
-			b: in std_logic_vector(3 downto 0);
-			op: in std_logic_vector(1 downto 0);
-			c: out std_logic_vector(3 downto 0)
+architecture arch of testbench is
+	component COUNTER8
+	port (
+		DATA: in std_logic_vector(7 downto 0);
+		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
+		NRCO: out std_logic
 		);
 	end component;
 
-	for test1: main use entity work.main(ALU1);
-	for test2: main use entity work.main(ALU2);
-	for test3: main use entity work.main(ALU3);
-	for test4: main use entity work.main(ALU4);
-	for test5: main use entity work.main(ALU5);
-	
-	signal test: std_logic_vector(9 downto 0) := b"0000000000";
-	signal c: std_logic_vector(19 downto 0);
+	signal TEST_DATA: std_logic_vector(7 downto 0) := b"00000000";
+	signal NRCO: std_logic;
+	signal NCCKEN, CCK, NCLOAD, RCK, NCCLR: std_logic := '0';
 begin
-	test1: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(3 downto 0));
-	test2: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(7 downto 4));
-	test3: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(11 downto 8));
-	test4: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(15 downto 12));
-	test5: main port map(test(3 downto 0), test(7 downto 4), test(9 downto 8), c(19 downto 16));
+	TEST_DATA <= TEST_DATA + 1 after 10 ps;
+	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
 	
-	test <= test + 1 after 10 ps;
-end main_testbench_arch;
+	CCK <= not CCK after 10 ps;
+	
+	process
+	begin
+		RCK <= '1';
+		wait for 10 ps;
+		NCCLR <= '1';
+		wait for 10 ps;	
+		NCCKEN <= '0';
+		wait for 10 ps;
+		NCLOAD <= '1' ;
+		
+		wait for 5200 ps; -- 10ps * 2 * 255 + 100ps
+		RCK <= '0';
+		wait for 20 ps;
+		RCK <= '1';
+		NCLOAD <= '0';
+		wait for 20 ps;
+		NCLOAD <= '1';
+		wait;
+	end process;
+
+end architecture;
