@@ -7,7 +7,8 @@ USE std.textio.ALL;
 
 entity testbench is
 generic(
-		constant period: time:= 20 ps
+		constant period: time:= 20 ps;
+		constant infinity: boolean := true
 	);	
 end entity;
 
@@ -55,7 +56,8 @@ begin
 
 
 	--genereate data test file
-	create_data_file : process
+	create_data_file : 
+	process
 		file 	 file_pointer : text; 
 		variable file_status 	: file_open_status;	
 		variable current_line 	: line;
@@ -67,10 +69,9 @@ begin
 		assert(file_status = OPEN_OK)
 			report "ERROR: open file WRITE_MODE "
 			severity failure;
-		
-		wait for period;
-		M1: for i in 0 to 79
-		loop			
+		while true
+		loop	
+			wait for period/4;
 			-- DATA: in std_logic_vector(7 downto 0);
 			-- NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
 			-- NRCO: out std_logic
@@ -89,9 +90,7 @@ begin
 			-- wire output result
 			write(current_line, NRCO);
 			writeline(file_pointer, current_line);
-      end loop;
+		end loop;
 		file_close(file_pointer);
-	wait;
 	end process;
-
 end architecture;
