@@ -10,18 +10,19 @@ port
 end D_TRIGER;
 
 architecture arch of D_TRIGER is
+	signal r: std_logic := '0';
 begin
+	Q <= r;
+	NQ <= not r;
+
 	process(CLK, NRST, NST)
 	begin
 		if NRST = '0' then 
-			Q <= '0';
-			NQ <= '1';
+			r <= '0';
 		elsif NST = '0' then 
-			Q <= '1';
-			NQ <= '0';
+			r <= '1';
 		elsif(CLK'event and CLK = '1') then
-			Q <= D;
-			NQ <= not D;
+			r <= D;
 		end if;
 	end process;
 

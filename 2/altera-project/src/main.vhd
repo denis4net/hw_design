@@ -48,7 +48,7 @@ begin
 	CLOAD <= not NCLOAD;
 	CCLR <= NCCLR;
 	
-	NRCK <= not RCK;
+	NRCK <= RCK;
 
 	CLKBLK0: CLKBLK port map(CCK=>CCK, NCLKEN=>NCCKEN, IN_CCK=>IN_CCK, NCCLR=>NCCLR);
 

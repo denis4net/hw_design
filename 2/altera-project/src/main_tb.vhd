@@ -2,10 +2,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
+USE ieee.std_logic_textio.ALL;
+USE std.textio.ALL;
 
 entity testbench is
-begin
-end testbench;
+generic(
+		constant period: time:= 20 ps
+	);	
+end entity;
 
 architecture arch of testbench is
 	component COUNTER8
@@ -20,29 +24,74 @@ architecture arch of testbench is
 	signal NRCO: std_logic;
 	signal NCCKEN, CCK, NCLOAD, RCK, NCCLR: std_logic := '0';
 begin
-	TEST_DATA <= TEST_DATA + 1 after 10 ps;
+	TEST_DATA <= TEST_DATA + 1 after period;
 	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
-	
-	CCK <= not CCK after 10 ps;
+	CCK <= not CCK after period/2;
 	
 	process
 	begin
-		RCK <= '1';
-		wait for 10 ps;
+		RCK <= '0';
+		wait for period/2;
 		NCCLR <= '1';
-		wait for 10 ps;	
+		wait for period/2;	
 		NCCKEN <= '0';
-		wait for 10 ps;
+		wait for period/2;
 		NCLOAD <= '1' ;
 		
-		wait for 5200 ps; -- 10ps * 2 * 255 + 100ps
-		RCK <= '0';
-		wait for 20 ps;
+		wait for period * 257;
 		RCK <= '1';
+		wait for (period);
+		RCK <= '0';
+		wait for 65 ps;
 		NCLOAD <= '0';
-		wait for 20 ps;
+		wait for period;
 		NCLOAD <= '1';
+		wait for 65 ps;
+		NCCLR <= '0';
+		wait for period;
+		NCCLR <= '1';
 		wait;
+	end process;
+
+
+	--genereate data test file
+	create_data_file : process
+		file 	 file_pointer : text; 
+		variable file_status 	: file_open_status;	
+		variable current_line 	: line;
+	
+	begin
+		-- create file
+		file_open(file_status, file_pointer, "test.data", WRITE_MODE);
+		-- check file open ok
+		assert(file_status = OPEN_OK)
+			report "ERROR: open file WRITE_MODE "
+			severity failure;
+		
+		wait for period;
+		M1: for i in 0 to 79
+		loop			
+			-- DATA: in std_logic_vector(7 downto 0);
+			-- NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
+			-- NRCO: out std_logic
+			write(current_line, TEST_DATA);
+			writeline(file_pointer, current_line);
+			write(current_line, NCCLR);
+			writeline(file_pointer, current_line);
+			write(current_line, NCCKEN);
+			writeline(file_pointer, current_line);
+			write(current_line, CCK);
+			writeline(file_pointer, current_line);
+			write(current_line, NCLOAD);
+			writeline(file_pointer, current_line);
+			write(current_line, RCK);
+			writeline(file_pointer, current_line);
+			-- wire output result
+			write(current_line, NRCO);
+			writeline(file_pointer, current_line);
+      end loop;
+		file_close(file_pointer);
+	wait;
 	end process;
 
 end architecture;
