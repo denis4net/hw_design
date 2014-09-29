@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"fNCL",
+				"fNCLOAD"
+			],
+			[
 				"CCKE",
 				"CCKEN_M"
 			],
@@ -124,11 +128,27 @@
 	"buffers":
 	[
 		{
-			"file": "/mnt/laptop-media/info/bsuir/9/КиДСВТ/Лабы/2_KiDSVT_var7/main.cpp",
+			"file": "2/altera-project/src/file_tb.vhd",
 			"settings":
 			{
-				"buffer_size": 11200,
-				"line_ending": "Windows"
+				"buffer_size": 2304,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "2/altera-project/src/main_tb.vhd",
+			"settings":
+			{
+				"buffer_size": 2401,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "2/altera-project/src/main.vhd",
+			"settings":
+			{
+				"buffer_size": 2035,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -203,14 +223,26 @@
 	],
 	"file_history":
 	[
-		"/home/denis/notes/toreadd.txt",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
+		"/tmp/vhd/lab2/test_counter.vhd",
+		"/home/denis/Projects/bsuir/9/FPGA/2/altera-project/src/test.data",
+		"/tmp/vhd/lab2/create_testFile.vhd",
 		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file.do",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file.vhd",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main.do",
+		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
+		"/home/denis/Projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
+		"/home/denis/Projects/bsuir/9/Diagnositc/2/Readme.txt",
+		"/home/denis/Projects/bsuir/9/Diagnositc/2/laba2testsets",
+		"/tmp/vhd/lab2/counter.vhd",
+		"/mnt/laptop-media/info/bsuir/9/КиДСВТ/Лабы/2_KiDSVT_var7/main.cpp",
+		"/tmp/vhd/LAB3/LAB2/create_testFile.vhd",
+		"/home/denis/notes/toreadd.txt",
 		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
 		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd.bak",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
 		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/collector.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main.do",
 		"/home/denis/Projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
 		"/home/denis/projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
 		"/home/denis/Projects/bsuir/9/InformationSecurity/1/BruteForce/main.cpp",
@@ -318,19 +350,7 @@
 		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/URNGNoiseGL_Kernels.cl",
 		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/URNGNoiseGL_Kernels.cl",
 		"/opt/AMDAPP/SDK/samples/opencl/bin/BlackScholes_Kernels.cl",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/CMakeLists.txt",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/MediaFilter.config",
-		"/home/denis/tmp/cpp_cl/GaussianNoise/CMakeLists.txt",
-		"/home/denis/tmp/cpp_cl/SobelFilterImage/SobelFilterImage_Kernels.cl",
-		"/opt/AMDAPP/SDK/samples/opencl/cl/SimpleGL/SimpleGL_Kernels.cl",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/Makefile",
-		"/mnt/laptop-home/Documents/Documents/bsuir/Защита_населения/schematic/devices.lib",
-		"/usr/local/bin/gpu_switch",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianFilter/filtermedian.cpp",
-		"/home/denis/3dsamples/NormalTest.mail",
-		"/mnt/laptop-home/Projects/QT/Hawk/samples/NormalTest.mail",
-		"/mnt/laptop-home/Cisco/PacketTracer601/set_ptenv.sh",
-		"/mnt/laptop-home/virtual_images/WindowsServer_2008_1.txt"
+		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/CMakeLists.txt"
 	],
 	"find":
 	{
@@ -349,6 +369,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"write(",
+			"writeline",
+			"ps",
+			"20 ps",
+			"10 ps",
+			"ic_vector(7 downto 0);\n		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;\n		NRCO: out std_logic",
 			"CLR=>",
 			"CLR",
 			"B",
@@ -407,6 +433,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"read(",
+			"readline",
+			"period * 2",
+			"period",
 			"CCLR=>",
 			"CCLR",
 			"display_",
@@ -431,35 +461,94 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/mnt/laptop-media/info/bsuir/9/КиДСВТ/Лабы/2_KiDSVT_var7/main.cpp",
+					"file": "2/altera-project/src/file_tb.vhd",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11200,
+						"buffer_size": 2304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1946,
+								1946
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C++.tmLanguage"
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 8692.0,
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "2/altera-project/src/main_tb.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2401,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2242,
+								2242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 482.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "2/altera-project/src/main.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								961,
+								961
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

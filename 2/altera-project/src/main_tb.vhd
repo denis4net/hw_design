@@ -4,6 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 USE ieee.std_logic_textio.ALL;
 USE std.textio.ALL;
+library std;
+use std.env.all;
 
 entity testbench is
 generic(
@@ -58,10 +60,9 @@ begin
 	--genereate data test file
 	create_data_file : 
 	process
-		file 	 file_pointer : text; 
+		file 	 file_pointer 	: text; 
 		variable file_status 	: file_open_status;	
 		variable current_line 	: line;
-	
 	begin
 		-- create file
 		file_open(file_status, file_pointer, "test.data", WRITE_MODE);
@@ -69,28 +70,27 @@ begin
 		assert(file_status = OPEN_OK)
 			report "ERROR: open file WRITE_MODE "
 			severity failure;
-		while true
-		loop	
-			wait for period/4;
-			-- DATA: in std_logic_vector(7 downto 0);
-			-- NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
-			-- NRCO: out std_logic
-			write(current_line, TEST_DATA);
-			writeline(file_pointer, current_line);
-			write(current_line, NCCLR);
-			writeline(file_pointer, current_line);
-			write(current_line, NCCKEN);
-			writeline(file_pointer, current_line);
-			write(current_line, CCK);
-			writeline(file_pointer, current_line);
-			write(current_line, NCLOAD);
-			writeline(file_pointer, current_line);
-			write(current_line, RCK);
-			writeline(file_pointer, current_line);
-			-- wire output result
-			write(current_line, NRCO);
-			writeline(file_pointer, current_line);
-		end loop;
-		file_close(file_pointer);
-	end process;
+
+			while true loop
+				-- DATA: in std_logic_vector(7 downto 0);
+				-- NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
+				-- NRCO: out std_logic
+				write(current_line, TEST_DATA);
+				writeline(file_pointer, current_line);
+				write(current_line, NCCLR);
+				writeline(file_pointer, current_line);
+				write(current_line, NCCKEN);
+				writeline(file_pointer, current_line);
+				write(current_line, CCK);
+				writeline(file_pointer, current_line);
+				write(current_line, NCLOAD);
+				writeline(file_pointer, current_line);
+				write(current_line, RCK);
+				writeline(file_pointer, current_line);	
+				wait for 1 ps;
+				write(current_line, NRCO);
+				writeline(file_pointer, current_line);
+
+			end loop;
+		end process;
 end architecture;

@@ -4,6 +4,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 USE ieee.std_logic_textio.ALL;
 USE std.textio.ALL;
+library std;
+use std.env.all;
 
 entity testbench_file is
 generic(
@@ -25,7 +27,8 @@ architecture arch of testbench_file is
 	signal NCCKEN, CCK, NCLOAD, RCK, NCCLR: std_logic := '0';
 begin
 	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
-	
+	CCK <= not CCK after period/2;
+	RCK <= not RCK after period/2;
 	--genereate data test file
 	create_data_file : process
 		file 	 file_pointer : text; 
@@ -37,7 +40,7 @@ begin
 		variable fNRCO: std_logic;
 	begin
 		-- create file
-		file_open(file_status, file_pointer, "test.data", READ_MODE);
+		file_open(file_status, file_pointer, "test.file.data", READ_MODE);
 		-- check file open ok
 		assert(file_status = OPEN_OK)
 			report "ERROR: open file WRITE_MODE "
@@ -56,30 +59,23 @@ begin
 			readline(file_pointer, current_line);
 			read(current_line, fNCCKEN);
 			readline(file_pointer, current_line);
-			read(current_line, fCCK);
-			readline(file_pointer, current_line);
 			read(current_line, fNCLOAD);
-			readline(file_pointer, current_line);
-			read(current_line, fRCK);
 			readline(file_pointer, current_line);
 			read(current_line, fNRCO);
 			
 			TEST_DATA <= fDATA;
 			NCCLR <= fNCCLR;
 			NCCKEN <= fNCCKEN;
-			CCK <= fCCK;
 			NCLOAD <= fNCLOAD;
-			RCK <= fRCK;
 			NRCO_FILE <= fNRCO;
 
-			wait for period/4;
-			
+			wait for 1*period;
+
 			assert(NRCO = NRCO_FILE)
 				report ("Test failed on test data");
-      		
-      end loop;
+      	end loop;
 		file_close(file_pointer);
-	wait;
+		stop(2);
 	end process;
 
 end architecture;
