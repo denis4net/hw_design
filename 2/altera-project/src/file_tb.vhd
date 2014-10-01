@@ -22,13 +22,21 @@ architecture arch of testbench_file is
 		);
 	end component;
 
-	signal TEST_DATA: std_logic_vector(7 downto 0) := b"00000000";
-	signal NRCO, NRCO_FILE: std_logic;
-	signal NCCKEN, CCK, NCLOAD, RCK, NCCLR: std_logic := '0';
+	signal TEST_DATA: 	std_logic_vector(7 downto 0) := b"00000000";
+	signal NRCO: 		std_logic;
+
+	signal NCCLR: 	std_logic := '0';
+	signal RCK: 	std_logic := '0';
+	signal NCLOAD: 	std_logic := '1';
+	signal NCCKEN: 	std_Logic := '0';
+	signal CCK: 	std_logic := '0';
+
+	signal NRCO_FILE: std_logic := '0';
 begin
 	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
-	CCK <= not CCK after period/2;
-	RCK <= not RCK after period/2;
+
+	CCK <= not CCK after period / 2;
+
 	--genereate data test file
 	create_data_file : process
 		file 	 file_pointer : text; 
@@ -38,14 +46,17 @@ begin
 		variable fDATA: std_logic_vector(7 downto 0);
 		variable fNCCLR, fNCCKEN,  fCCK, fNCLOAD, fRCK: std_logic;
 		variable fNRCO: std_logic;
+		variable timestamp: time;
 	begin
 		-- create file
-		file_open(file_status, file_pointer, "test.file.data", READ_MODE);
+		file_open(file_status, file_pointer, "test.data", READ_MODE);
 		-- check file open ok
 		assert(file_status = OPEN_OK)
 			report "ERROR: open file WRITE_MODE "
 			severity failure;
-		
+
+		wait for period;
+
 		readloop:
 		while not endfile(file_pointer)
 		loop			
@@ -53,27 +64,38 @@ begin
 			-- NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
 			-- NRCO: out std_logic
 			readline(file_pointer, current_line);
+			read(current_line, timestamp);
+
+			readline(file_pointer, current_line);
 			read(current_line, fDATA);
+			
 			readline(file_pointer, current_line);
 			read(current_line, fNCCLR);
+			
 			readline(file_pointer, current_line);
 			read(current_line, fNCCKEN);
+
 			readline(file_pointer, current_line);
 			read(current_line, fNCLOAD);
+			
+			readline(file_pointer, current_line);
+			read(current_line, fRCK);
+
 			readline(file_pointer, current_line);
 			read(current_line, fNRCO);
-			
+
 			TEST_DATA <= fDATA;
 			NCCLR <= fNCCLR;
 			NCCKEN <= fNCCKEN;
 			NCLOAD <= fNCLOAD;
 			NRCO_FILE <= fNRCO;
+			RCK <= fRCK;
 
-			wait for 1*period;
+			wait for period / 2;
 
-			assert(NRCO = NRCO_FILE)
-				report ("Test failed on test data");
-      	end loop;
+			assert(NRCO = NRCO_FILE) report ("Test failed on test.data");
+
+		end loop;
 		file_close(file_pointer);
 		stop(2);
 	end process;

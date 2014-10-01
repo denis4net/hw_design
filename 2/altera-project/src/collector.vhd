@@ -20,7 +20,6 @@ begin
 
 	process (CLK)
 	begin
-		if CLK = '1' then
 			B(0) <= collector_bus(0) and CLK;
 			B(1) <= collector_bus(0) and collector_bus(1) and CLK;
 			B(2) <= collector_bus(0) and collector_bus(1) and collector_bus(2) and CLK;
@@ -28,8 +27,6 @@ begin
 			B(4) <= collector_bus(0) and collector_bus(1) and collector_bus(2) and collector_bus(3) and collector_bus(4) and CLK;
 			B(5) <= collector_bus(0) and collector_bus(1) and collector_bus(2) and collector_bus(3) and collector_bus(4) and collector_bus(5) and CLK;
 			B(6) <= collector_bus(0) and collector_bus(1) and collector_bus(2) and collector_bus(3) and collector_bus(4) and collector_bus(5) and collector_bus(6) and CLK;
-		end if;
-
 
 		NRCO <= not (
 				 collector_bus(0) and collector_bus(1) and collector_bus(2) and 
