@@ -34,44 +34,64 @@ architecture arch of testbench is
 	signal CCK: 	std_logic := '0';
 	signal QDATA: 	std_logic_vector(7 downto 0) := b"00000000";
 begin
-	TEST_DATA <= TEST_DATA + 1 after period;
-	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR, QDATA=>QDATA);
-
-	process
-	begin
-		wait for 2*period;
-		NCCLR <= '1';	
-		wait for period * 257;
-		wait for 4 * period; 
-		NCCLR <= '0';
-		wait for period;
-		NCCLR <= '1';
-		wait for 2 * period;
-		NCCKEN <= '1';
-		wait;
-	end process;
+	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, 
+								 CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR, QDATA=>QDATA);
 
 	CCK <= not CCK after period / 2;
 
 	process 
 	begin
-		wait for period * 2;
-		RCK <= '1';
-		wait for period * 1;
-		RCK <= '0';
-		wait for period * 2;
-		NCLOAD <= '0';
-		wait for period * 1;
-		NCLOAD <= '1';
-		wait for 20 * period;
-		NCCLR <= '0';
-		wait for period;
-		NCCLR <= '1';
-		wait for period * 3;
-		NCCKEN <= '1'
-		wait for period * 3;
-		
+		wait for 1 * period;
+		NCCLR <= '1';	
+		wait for 1 * period;
+
+		-- test load availability
+		for i in 0 to 255 loop
+			wait for period * 1;
+			RCK <= '1';
+			wait for period * 1;
+			RCK <= '0';
+			wait for period * 2;
+			NCLOAD <= '0';
+			wait for period * 1;
+			NCLOAD <= '1';
+			wait for 2 * period;
+			TEST_DATA <= TEST_DATA + 1;
+		end loop;
+
+		TEST_DATA <= "00000000";
+		-- tetst reset and nccken
+		for i in 0 to 255 loop
+			wait for period * 1;
+			RCK <= '1';
+			wait for period * 1;
+			RCK <= '0';
+			wait for period * 1;
+			NCLOAD <= '0';
+			wait for period * 1;
+			NCLOAD <= '1';
+			wait for period;
+			NCCLR <= '0';
+			wait for period;
+			NCCLR <= '1';
+			wait for period * 2;
+			NCCKEN <= '1';
+			wait for period * 2;
+			NCCKEN <= '0';
+			wait for period * 2;
+			TEST_DATA <= TEST_DATA + 1;
+		end loop;
+
+		-- test counter
+		TEST_DATA <= "00000000";
+		for i in 0 to 255 loop
+			wait for period * 1;
+			TEST_DATA <= TEST_DATA + 1;
+		end loop;
+
+		stop(2);
 	end process;
+
 	--genereate data test file
 	create_data_file : 
 	process
@@ -117,7 +137,6 @@ begin
 				write(current_line, QDATA);
 				writeline(file_pointer, current_line);
 
-				
 				wait for period / 2;
 			end loop;
 		end process;

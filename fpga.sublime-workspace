@@ -232,6 +232,7 @@
 	],
 	"file_history":
 	[
+		"/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/Makefile",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/fpga_main.v",
 		"/home/denis/Projects/bsuir/8/cifo/documentation/pinout.txt",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clkdiv.v",
@@ -358,8 +359,7 @@
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/100-finatest/soc_tb.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/soc.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/constants.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.as",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/14-display/soc_tb.v"
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.as"
 	],
 	"find":
 	{
