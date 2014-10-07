@@ -4,16 +4,44 @@
 		"selected_items":
 		[
 			[
-				"fNCL",
-				"fNCLOAD"
+				"load",
+				"load_2"
 			],
 			[
-				"CCKE",
-				"CCKEN_M"
+				"con",
+				"constant_0"
 			],
 			[
-				"D",
-				"D_TRIGER"
+				"cos",
+				"constant_1"
+			],
+			[
+				"cons",
+				"constant_1"
+			],
+			[
+				"COLLE",
+				"COLLECTOR_IN"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"NC",
+				"NCCKEN"
+			],
+			[
+				"NCL",
+				"NCCLR"
+			],
+			[
+				"const",
+				"const_1"
+			],
+			[
+				"NCC",
+				"NCCKEN"
 			],
 			[
 				"client",
@@ -127,37 +155,17 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "2/altera-project/src/file_tb.vhd",
-			"settings":
-			{
-				"buffer_size": 2304,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "2/altera-project/src/main_tb.vhd",
-			"settings":
-			{
-				"buffer_size": 2401,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "2/altera-project/src/main.vhd",
-			"settings":
-			{
-				"buffer_size": 2035,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 404.0,
+		"height": 78.0,
 		"selected_items":
 		[
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: ",
 				"Package Control: List Packages"
@@ -195,7 +203,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 552.0
+		"width": 698.0
 	},
 	"console":
 	{
@@ -216,49 +224,95 @@
 	},
 	"expanded_folders":
 	[
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src"
+		"/home/denis/projects/bsuir/9/FPGA",
+		"/home/denis/projects/bsuir/9/FPGA/1",
+		"/home/denis/projects/bsuir/9/FPGA/2",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src"
 	],
 	"file_history":
 	[
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
-		"/tmp/vhd/lab2/test_counter.vhd",
-		"/home/denis/Projects/bsuir/9/FPGA/2/altera-project/src/test.data",
-		"/tmp/vhd/lab2/create_testFile.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file.do",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/file.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main.do",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
-		"/home/denis/Projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
-		"/home/denis/Projects/bsuir/9/Diagnositc/2/Readme.txt",
-		"/home/denis/Projects/bsuir/9/Diagnositc/2/laba2testsets",
-		"/tmp/vhd/lab2/counter.vhd",
-		"/mnt/laptop-media/info/bsuir/9/КиДСВТ/Лабы/2_KiDSVT_var7/main.cpp",
-		"/tmp/vhd/LAB3/LAB2/create_testFile.vhd",
-		"/home/denis/notes/toreadd.txt",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd.bak",
-		"/mnt/laptop-home/Projects/bsuir/9/FPGA/2/altera-project/src/collector.vhd",
-		"/home/denis/Projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/fpga_main.v",
+		"/home/denis/Projects/bsuir/8/cifo/documentation/pinout.txt",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clkdiv.v",
+		"/home/denis/Projects/bsuir/8/cifo/mips-cpu/verilog/soc.v",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/resources/sphere.obj",
+		"/home/denis/projects/bsuir/8/cifo/documentation/cycloneIII_development_board.txt",
+		"/mnt/data/projects/bsuir/9/Graphics/submarine/resources/rocket.obj",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/resources/submarine.dae",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/resources/submarine.obj",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/Makefile",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/CMakeLists.txt",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/water.cpp",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/libjpeg.cmake",
+		"/tmp/openvpn/credentials.txt",
+		"/home/denis/projects/bsuir/9/Graphics/submarine/resources/model__readme.txt",
+		"/tmp/openvpn/users.txt",
+		"/tmp/openvpn/h2.bsuir.by.ovpn",
+		"/tmp/dl/mnt/laptop-media/images/Windows 7/key.txt",
+		"/tmp/openvpn/openvpn-h2.conf",
+		"/home/denis/transcript",
+		"/tmp/enc/pins.txt.asc",
+		"/tmp/enc/pins.txt",
+		"/tmp/enc/mmb.txt",
+		"/tmp/enc/tox_save.txt",
+		"/tmp/enc/bps_virtuon.txt",
+		"/tmp/enc/paypal_email.txt",
+		"/tmp/enc/mt_inet.txt",
+		"/tmp/enc/cards.txt",
+		"/mnt/data/sync/documents/.enc/pins.enc",
+		"/tmp/enc/bpbs.txt",
+		"/mnt/data/sync/documents/.enc/rc.asc",
+		"/mnt/data/sync/documents/.enc/pins.asc",
+		"/mnt/data/sync/documents/bsuir/Управление предприятием - курсовая работа/Курсовая работа.txt",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/testbench1.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/adder.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/testbench0.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.do",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/test.data",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave1.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/Makefile",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/test0.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/test1.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/alu_testbench.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/Makefile",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/testbench2.vhd",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/Makefile",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.do",
+		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave.do",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/testbench1.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/wave.do",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/test.data",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/collector.vhd",
+		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/testbench2.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd.bak",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/d_algorithm.cpp",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/d_algorithm.h",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/mainwindow.h",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/d-cubes.pro",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/lab2.config",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/lab2.includes",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/nxor_le.cpp",
+		"/mnt/data/projects/bsuir/9/Diagnositc/2/output_pin.cpp",
+		"/usr/bin/subl3",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clk.vhd",
+		"/mnt/data/sync/notes/todo",
 		"/home/denis/projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
+		"/home/denis/Projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
 		"/home/denis/Projects/bsuir/9/InformationSecurity/1/BruteForce/main.cpp",
 		"/home/denis/Downloads/main.cpp",
 		"/mnt/data/documents/Курсовой проект по экономике.txt",
 		"/tmp/socket.c",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main_tb2.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.do",
-		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave.do",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/buses.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main_tb.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/work/main_testbench/main_testbench_arch.dat",
-		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/Makefile",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/vsim.do",
 		"/home/denis/projects/bsuir/9/Diagnositc/2.py",
 		"/home/denis/projects/bsuir/9/Diagnositc/1.py",
@@ -305,60 +359,15 @@
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/soc.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/constants.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.as",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/14-display/soc_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/periph_leds.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ioctrl.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im_cached.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/control.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/08-lw_sw/main.asm",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/regm.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/Makefile",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/alu.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/ioslot.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/cmd.py",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/mem_converter.py",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im.as",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/alu_control.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im_data.as",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/soc_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/leds_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/11-periph/im_data.hex-commented",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/spliter.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/dm.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/dm_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/rdecode.py",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/utilits/itype.py",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/08-lw_sw/im_data.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/main.asm",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/soc_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/main_tb.check",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.out",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/01-cpu_no_hazard/main_tb.check",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/07-lw_sw/im_data.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/im_data.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/prepare.sh",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/02-operators/im_data.hex",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/prepare",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/10-soc/soc_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/bin/gen_cpu_tb",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/bin/gen_soc_tb",
-		"/opt/AMDAPP/SDK/samples/opencl/cl/SimpleImage/SimpleImage_Kernels.cl",
-		"/home/denis/ciso.txt",
-		"/opt/AMDAPP/SDK/samples/opencl/bin/GaussianNoise_Kernels.cl",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/URNGNoiseGL_Kernels.cl",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/MedianOpenGL/URNGNoiseGL_Kernels.cl",
-		"/opt/AMDAPP/SDK/samples/opencl/bin/BlackScholes_Kernels.cl",
-		"/mnt/laptop-home/Projects/bsuir/avmis/8/FilterGL/CMakeLists.txt"
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/14-display/soc_tb.v"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 47.0
 	},
 	"find_in_files":
 	{
-		"height": 96.0,
+		"height": 129.0,
 		"where_history":
 		[
 			""
@@ -369,16 +378,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"write(",
-			"writeline",
-			"ps",
-			"20 ps",
-			"10 ps",
-			"ic_vector(7 downto 0);\n		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;\n		NRCO: out std_logic",
-			"CLR=>",
-			"CLR",
-			"B",
-			"4",
+			"//",
+			"-std",
+			". ",
+			"-g",
+			"3",
+			"/testbench0/",
+			"/main_testbench/",
+			"CCLR",
+			"t_s",
+			"t_r",
+			"t_N",
+			"t_r",
+			"and CLK",
+			"CLK",
+			";;",
+			"and CLK",
+			"and I and CLK;",
+			", CLK=>IN_CCK",
+			" and I",
+			"test_data",
+			"CCKEN_M",
+			"CARRY_OUT",
+			"CELL2COLLECTOR",
+			"FROM_COLLECTOR",
 			"IMAGE_SUPPORT",
 			"pcsrc",
 			"branch_flush",
@@ -433,12 +456,23 @@
 		"regex": false,
 		"replace_history":
 		[
-			"read(",
-			"readline",
-			"period * 2",
-			"period",
-			"CCLR=>",
-			"CCLR",
+			"/0/",
+			"/testbench1/",
+			"/tesbench0/",
+			"t_NS",
+			"t_NR",
+			"",
+			"nclk",
+			";",
+			"and not CLK;",
+			"and CLK;",
+			"",
+			" and I and CLK",
+			"TEST_DATA",
+			"IN_CCK",
+			"COLLECTOR_IN",
+			"CARRY_OUT",
+			"CARRY",
 			"display_",
 			"cpu_read",
 			"cpu_write",
@@ -461,106 +495,18 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "2/altera-project/src/file_tb.vhd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2304,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1946,
-								1946
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 242.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "2/altera-project/src/main_tb.vhd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2401,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2242,
-								2242
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 482.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "2/altera-project/src/main.vhd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								961,
-								961
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -585,6 +531,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -592,7 +542,7 @@
 	"project": "fpga.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 88.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -635,7 +585,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 328.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{

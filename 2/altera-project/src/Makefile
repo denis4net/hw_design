@@ -4,10 +4,10 @@ PATH:=$(PATH):$(MULTISIM)
 design=main
 
 
-testbench1:
+test0:
 	vsim -do main.do
 
-testbench2:
+test1:
 	vsim -do file.do
 
 # Clean all library directories

@@ -19,7 +19,8 @@ architecture arch of testbench is
 	port (
 		DATA: in std_logic_vector(7 downto 0);
 		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
-		NRCO: out std_logic
+		NRCO: out std_logic;
+		QDATA: out std_logic_vector(7 downto 0)
 		);
 	end component;
 
@@ -31,34 +32,46 @@ architecture arch of testbench is
 	signal NCLOAD: 	std_logic := '1';
 	signal NCCKEN: 	std_Logic := '0';
 	signal CCK: 	std_logic := '0';
+	signal QDATA: 	std_logic_vector(7 downto 0) := b"00000000";
 begin
 	TEST_DATA <= TEST_DATA + 1 after period;
-	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
+	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR, QDATA=>QDATA);
 
 	process
 	begin
 		wait for 2*period;
 		NCCLR <= '1';	
-		
 		wait for period * 257;
-		
-		RCK <= '1';	  --load (1 stage) to counter
-		wait for period;
-		RCK <= '0';	  --end load (1 stage)
 		wait for 4 * period; 
-		NCLOAD <= '0'; --load to counter (stage 2)
-		wait for 2*period;
-		NCLOAD <= '1'; --end load
-		
-		wait for 4 * period;
 		NCCLR <= '0';
 		wait for period;
 		NCCLR <= '1';
+		wait for 2 * period;
+		NCCKEN <= '1';
 		wait;
 	end process;
 
 	CCK <= not CCK after period / 2;
 
+	process 
+	begin
+		wait for period * 2;
+		RCK <= '1';
+		wait for period * 1;
+		RCK <= '0';
+		wait for period * 2;
+		NCLOAD <= '0';
+		wait for period * 1;
+		NCLOAD <= '1';
+		wait for 20 * period;
+		NCCLR <= '0';
+		wait for period;
+		NCCLR <= '1';
+		wait for period * 3;
+		NCCKEN <= '1'
+		wait for period * 3;
+		
+	end process;
 	--genereate data test file
 	create_data_file : 
 	process
@@ -100,6 +113,10 @@ begin
 			
 				write(current_line, NRCO);
 				writeline(file_pointer, current_line);
+
+				write(current_line, QDATA);
+				writeline(file_pointer, current_line);
+
 				
 				wait for period / 2;
 			end loop;

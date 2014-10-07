@@ -18,7 +18,8 @@ architecture arch of testbench_file is
 	port (
 		DATA: in std_logic_vector(7 downto 0);
 		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
-		NRCO: out std_logic
+		NRCO: out std_logic;
+		QDATA: out std_logic_vector(7 downto 0)
 		);
 	end component;
 
@@ -32,8 +33,9 @@ architecture arch of testbench_file is
 	signal CCK: 	std_logic := '0';
 
 	signal NRCO_FILE: std_logic := '0';
+	signal QDATA: 	std_logic_vector(7 downto 0) := b"00000000";
 begin
-	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR);
+	COUNTER80: COUNTER8 port map(DATA=>TEST_DATA, NRCO=>NRCO, NCCKEN=>NCCKEN, CCK=>CCK, NCLOAD=>NCLOAD, RCK=>RCK, NCCLR=>NCCLR, QDATA=>QDATA);
 
 	CCK <= not CCK after period / 2;
 
@@ -47,6 +49,7 @@ begin
 		variable fNCCLR, fNCCKEN,  fCCK, fNCLOAD, fRCK: std_logic;
 		variable fNRCO: std_logic;
 		variable timestamp: time;
+		variable fQDATA: std_logic_vector(7 downto 0);
 	begin
 		-- create file
 		file_open(file_status, file_pointer, "test.data", READ_MODE);
@@ -84,6 +87,9 @@ begin
 			readline(file_pointer, current_line);
 			read(current_line, fNRCO);
 
+			readline(file_pointer, current_line);
+			read(current_line, fQDATA);
+
 			TEST_DATA <= fDATA;
 			NCCLR <= fNCCLR;
 			NCCKEN <= fNCCKEN;
@@ -91,10 +97,11 @@ begin
 			NRCO_FILE <= fNRCO;
 			RCK <= fRCK;
 
+
 			wait for period / 2;
 
 			assert(NRCO = NRCO_FILE) report ("Test failed on test.data");
-
+			assert(QDATA = fQDATA) report ("Test (2) failed");
 		end loop;
 		file_close(file_pointer);
 		stop(2);

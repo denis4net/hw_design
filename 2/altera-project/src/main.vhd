@@ -10,7 +10,8 @@ entity COUNTER8 is
 	port (
 		DATA: in std_logic_vector(7 downto 0);
 		NCCLR, NCCKEN,  CCK, NCLOAD, RCK: in std_logic;
-		NRCO: out std_logic
+		NRCO: out std_logic;
+		QDATA: out std_logic_vector(7 downto 0)
 		);
 end entity;
 
@@ -52,6 +53,8 @@ begin
 	CLKBLK0: CLKBLK port map(CCK=>CCK, NCLKEN=>NCCKEN, IN_CCK=>IN_CCK, NCCLR=>NCCLR);
 
 	COLLECTOR0: COLLECTOR port map(A=>COLLECTOR_IN, B=>CARRY, CLK=>IN_CCK, NRCO=>NRCO); 
+
+	QDATA <= COLLECTOR_IN;
 
 	CELL0: MEMCELL port map(A=>DATA(0), B=>IN_CCK, 		NRCK=>NRCK, CLOAD=>CLOAD, NCCLR=>NCCLR, O=>COLLECTOR_IN(0));
 	CELL1: MEMCELL port map(A=>DATA(1), B=>CARRY(0), 	NRCK=>NRCK, CLOAD=>CLOAD, NCCLR=>NCCLR, O=>COLLECTOR_IN(1));
