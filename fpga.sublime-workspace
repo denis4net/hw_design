@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"NCL",
+				"NCLKEN"
+			],
+			[
+				"std_log",
+				"std_logic_vector"
+			],
+			[
 				"load",
 				"load_2"
 			],
@@ -30,10 +38,6 @@
 			[
 				"NC",
 				"NCCKEN"
-			],
-			[
-				"NCL",
-				"NCCLR"
 			],
 			[
 				"const",
@@ -155,6 +159,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+			"settings":
+			{
+				"buffer_size": 3330,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -232,12 +244,20 @@
 	],
 	"file_history":
 	[
-		"/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/Makefile",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/fpga_main.v",
-		"/home/denis/Projects/bsuir/8/cifo/documentation/pinout.txt",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clkdiv.v",
-		"/home/denis/Projects/bsuir/8/cifo/mips-cpu/verilog/soc.v",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clk.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/3/Задание>txt",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/collector.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clkdiv.v",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+		"/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.do",
+		"/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/Makefile",
+		"/home/denis/Projects/bsuir/8/cifo/documentation/pinout.txt",
+		"/home/denis/Projects/bsuir/8/cifo/mips-cpu/verilog/soc.v",
 		"/home/denis/projects/bsuir/9/Graphics/submarine/resources/sphere.obj",
 		"/home/denis/projects/bsuir/8/cifo/documentation/cycloneIII_development_board.txt",
 		"/mnt/data/projects/bsuir/9/Graphics/submarine/resources/rocket.obj",
@@ -268,13 +288,10 @@
 		"/mnt/data/sync/documents/.enc/pins.asc",
 		"/mnt/data/sync/documents/bsuir/Управление предприятием - курсовая работа/Курсовая работа.txt",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/file_tb.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/testbench1.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/adder.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/testbench0.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.do",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/dtriger.vhd",
 		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/test.data",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave1.do",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/Makefile",
@@ -287,10 +304,8 @@
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/main.do",
 		"/home/denis/projects/bsuir/9/FPGA/1/altera-project/src/wave.do",
 		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/testbench1.vhd",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/memcell.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/wave.do",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/test.data",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/collector.vhd",
 		"/home/denis/Projects/bsuir/9/FPGA/1/altera-project/src/testbench2.vhd",
 		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/main.vhd.bak",
 		"/mnt/data/projects/bsuir/9/Diagnositc/2/d_algorithm.cpp",
@@ -302,7 +317,6 @@
 		"/mnt/data/projects/bsuir/9/Diagnositc/2/nxor_le.cpp",
 		"/mnt/data/projects/bsuir/9/Diagnositc/2/output_pin.cpp",
 		"/usr/bin/subl3",
-		"/home/denis/projects/bsuir/9/FPGA/2/altera-project/src/clk.vhd",
 		"/mnt/data/sync/notes/todo",
 		"/home/denis/projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
 		"/home/denis/Projects/bsuir/9/InformationSecurity/1/qproject/main.cpp",
@@ -357,9 +371,7 @@
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/soc_tb.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/periph_lg3641bh.v",
 		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/test/100-finatest/soc_tb.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/soc.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/constants.v",
-		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/im.as"
+		"/mnt/laptop-home/Projects/bsuir/cifo/mips-cpu/verilog/soc.v"
 	],
 	"find":
 	{
@@ -378,6 +390,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"			",
+			"d7000000",
+			"NCCLR",
 			"//",
 			"-std",
 			". ",
@@ -495,14 +510,43 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/mnt/data/projects/bsuir/9/FPGA/2/altera-project/src/main_tb.vhd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/VHDL/Syntaxes/VHDL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -542,7 +586,7 @@
 	"project": "fpga.sublime-project",
 	"replace":
 	{
-		"height": 88.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -14,14 +14,9 @@ module fpga_main(input clk, input [7:0] data_in,
 	assign constant_1 = 1;
 	assign constant_0 = 0;
 
-	clkdiv #(.CLK_DIVIDER_VALUE(26'd5000000)) div1(.in(clk), .out(clk_div));
+	clkdiv #(.CLK_DIVIDER_VALUE(29'd5000000)) div1(.in(clk), .out(clk_div));
 
-	//COUNTER8 counter0(.DATA(in_data), .NCCLR(clr), .NCCKEN(clken), 
-	//				 .CCK(clk_div), .NCLOAD(load_2), .RCK(load_1), .QDATA(data));
+	COUNTER8 counter0(.DATA(data_in), .NCCLR(clr), .NCCKEN(~clken), 
+					 .CCK(clk_div), .NCLOAD(load_2), .RCK(clk_div), .QDATA(data));
 
-	//COUNTER8 counter0(.DATA(in_data), .NCCLR(constant_1), .NCCKEN(constant_0), 
-	//				 .CCK(clk_div), .NCLOAD(constant_1), .RCK(clk_div), .QDATA(data));
-	
-	COUNTER counter1(.CCK(clk_div), .DATA(data_in), .NCCKEN(~clken), 
-		.NCLOAD(load_2), .NCCLR(clr), .QDATA(data));
 endmodule

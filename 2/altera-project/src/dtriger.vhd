@@ -17,11 +17,11 @@ begin
 
 	process(CLK, NRST, NST)
 	begin
-		if NRST = '0' then 
-			r <= '0';
-		elsif NST = '0' then 
+		if NST = '0' then 
 			r <= '1';
-		elsif(CLK'event and CLK = '1') then
+		elsif NRST = '0' then 
+			r <= '0';
+		elsif(falling_edge(CLK)) then
 			r <= D;
 		end if;
 	end process;

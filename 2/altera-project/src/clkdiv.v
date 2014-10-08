@@ -40,7 +40,7 @@ module COUNTER(  input [7:0] DATA, input NCCLR, input NCCKEN, input CCK,
         _icounter = {(CLK_DIVIDER_WIDTH){1'b0}};
     end
 
-    always @(posedge CCK) begin
+    always @(posedge CCK, negedge NCCKEN, negedge NCCLR) begin
         if (~NCCKEN) begin
             if (~NCCLR) begin
                 _icounter = 8'h0;
@@ -49,7 +49,9 @@ module COUNTER(  input [7:0] DATA, input NCCLR, input NCCKEN, input CCK,
                 _icounter = DATA;
             end
             else begin
-                _icounter =  _icounter + 1;
+                if (CCK == 1) begin
+                   	_icounter =  _icounter + 1;
+                end
             end
         end
     end

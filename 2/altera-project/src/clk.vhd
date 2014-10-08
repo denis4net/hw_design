@@ -26,6 +26,8 @@ architecture arch of CLKBLK is
 	signal const_0: std_logic:= '0';
 begin
 	D0: D_TRIGER port map(D=>wire0, Q=>wire1, NQ=>wire0, CLK=>CCK, NRST=>NCCLR, NST=>const_1);
-
-	IN_CCK <= not NCLKEN and CCK;
+	process (CCK, NCLKEN)
+	begin
+		IN_CCK <= not NCLKEN and CCK;
+	end process;
 end;
