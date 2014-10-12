@@ -1,7 +1,7 @@
 module uart_tx(
    // Outputs
    output uart_busy,   // High means UART is transmitting
-   output uart_tx,     // UART transmit wire
+   output reg uart_tx,     // UART transmit wire
    // Inputs
    input uart_wr_i,   // Raise to transmit byte
    input [7:0] uart_dat_i,  // 8-bit data
@@ -14,12 +14,11 @@ module uart_tx(
 
   reg [3:0] bitcount;
   reg [8:0] shifter;
-  reg uart_tx;
 
-  wire uart_busy = | bitcount[3:1];
+  assign uart_busy = | bitcount[3:1];
   wire sending = | bitcount;
 
-  // sys_clk_i is 50MHz (Pin 152).  We want a 9600Hz clock
+  // sys_clk_i is 50MHz.  We want a 9600Hz clock
 
   reg [28:0] d;
   wire [28:0] dInc = d[28] ? (BAUD_RATE) : (BAUD_RATE - SYS_CLK_RATE);
@@ -27,7 +26,11 @@ module uart_tx(
   
   always @(posedge sys_clk_i)
   begin
-    d = dNxt;
+    if (sys_rst_i) begin
+      d = 29'h0;
+    end
+    else 
+      d = dNxt;
   end
   
   wire ser_clk = ~d[28]; // this is the BAUD_RATE Hz clock
