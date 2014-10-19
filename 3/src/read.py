@@ -5,5 +5,6 @@ import serial
 ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
 
 while True:
-	
-	print(ser.read())
+	b = ser.read()
+	if (len(b) > 0):
+		print(hex(b[0]))

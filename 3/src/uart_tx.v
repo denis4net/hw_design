@@ -43,7 +43,6 @@ module uart_tx(
       shifter <= 0;
     end
     else begin
-      // just got a new byte
       if (uart_wr_i & ~uart_busy) begin
         shifter <= { uart_dat_i[7:0], 1'h0 };
         bitcount <= (1 + 8 + 1);
