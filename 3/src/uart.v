@@ -52,7 +52,6 @@ module UART(
         4'b1000: baud_rate <= 9600;
         4'b0100: baud_rate <= 56000;
         4'b0010: baud_rate <= 115200;
-		    default: baud_rate <= 9600;
       endcase
     end
   end
@@ -95,14 +94,12 @@ module UART(
   reg [3:0] bitcount_rx;
   reg [7:0] shifter_rx;
   wire rx_clk;
-  wire rx_baudrate_rst;
-  wire rx_is_catched;
+  reg rx_baudrate_rst;
 
   BaudRateGenerator #(.SYS_CLK_RATE(SYS_CLK_RATE)) 
-    rxGenerator(.baudrate(baud_rate), .clk(clk), .rst(rx_baudrate_rst), .baudclk(rx_clk));
+    rxGenerator(.baudrate(baud_rate), .clk(clk), .rst(rx_baudrate_rst | rst), .baudclk(rx_clk));
 
   assign rx_busy = | bitcount_rx;
-  assign rx_baudrate_rst = rst | rx_is_catched;
   
   always @(posedge clk or posedge rst)
   begin
@@ -114,18 +111,21 @@ module UART(
       if (~rx_busy & ~rx) begin
         shifter_rx <= 0;
         bitcount_rx <= BIT_COUNT - 2;
+        rx_baudrate_rst <= 1;
       end
-      
-      else if (rx_clk) begin
+      else begin
+        rx_baudrate_rst <= 0;
+      end
+
+      if (rx_clk & rx_busy) begin
         shifter_rx <= { rx, shifter_rx[7:1] };
         bitcount_rx <= bitcount_rx - 1;
       end
+      
     end
   end
 
   always @(negedge rx_busy)
     rx_reg <= shifter_rx;  
-
-  assign rx_is_catched = ~rx_busy & ~rst & ~rx & clk; 
 
 endmodule
