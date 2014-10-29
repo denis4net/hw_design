@@ -8,5 +8,5 @@ while True:
 	b = ser.read()
 	if (len(b) > 0):
 		print(hex(b[0]))
-		ser.write(b[0])
+		ser.write(b)
 		

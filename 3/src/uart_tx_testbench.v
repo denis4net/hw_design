@@ -7,17 +7,17 @@ module testbench;
   wire uart_busy, uart_tx;
   reg sys_rst, uart_wr_i, sys_clk;
 
-  reg rx;
   wire rx_busy;
   wire [7:0] rx_reg;
 
   wire bg_clk;
 
+  wire rx = uart_tx;
+
   initial begin
   	$dumpfile("uart_testbench.vcd");
     $dumpvars(0, uart0);
 
-    rx <= 1;
     sys_clk <= 0;
     sys_rst <= 0;
     uart_dat_i <= 8'hFF;
@@ -32,11 +32,6 @@ module testbench;
     #2 uart_wr_i <= 1;
     #4 uart_wr_i <= 0;
     
-    #4 rx <= 0;
-    #4 rx <= 1;
-    #4 rx <= 0;
-    #4 rx <= 1;
-
     #200 $finish();
   end
 

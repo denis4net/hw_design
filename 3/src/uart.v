@@ -2,18 +2,17 @@ module BaudRateGenerator(input [28:0] baudrate, input rst, input clk, output bau
   parameter SYS_CLK_RATE = 50000000;
 
   reg [28:0] d;
+
   wire [28:0] dInc = d[28] ? (baudrate) : (baudrate - SYS_CLK_RATE);
   wire [28:0] dNxt = d + dInc;
   
-  always @(posedge clk or posedge rst)
+  always @(posedge clk)
   begin
-      if (rst)
-        d = 0;
-      else if (clk)
-        d = dNxt;
+    if (clk & ~rst)
+      d = dNxt;
   end
 
-  assign baudclk = ~d[28]; // this is the BAUD_RATE Hz clock
+  assign baudclk = ~d[28] & ~rst; // this is the BAUD_RATE Hz clock
 endmodule
 
 
@@ -94,12 +93,13 @@ module UART(
   reg [3:0] bitcount_rx;
   reg [7:0] shifter_rx;
   wire rx_clk;
-  reg rx_baudrate_rst;
 
   BaudRateGenerator #(.SYS_CLK_RATE(SYS_CLK_RATE)) 
     rxGenerator(.baudrate(baud_rate), .clk(clk), .rst(rx_baudrate_rst | rst), .baudclk(rx_clk));
 
-  assign rx_busy = | bitcount_rx;
+  assign rx_busy = | bitcount_rx;  
+  assign rx_baudrate_rst = ~rx_busy;
+
   
   always @(posedge clk or posedge rst)
   begin
@@ -111,13 +111,8 @@ module UART(
       if (~rx_busy & ~rx) begin
         shifter_rx <= 0;
         bitcount_rx <= BIT_COUNT - 2;
-        rx_baudrate_rst <= 1;
       end
-      else begin
-        rx_baudrate_rst <= 0;
-      end
-
-      if (rx_clk & rx_busy) begin
+      else if (rx_clk & rx_busy) begin
         shifter_rx <= { rx, shifter_rx[7:1] };
         bitcount_rx <= bitcount_rx - 1;
       end
