@@ -5,7 +5,8 @@ module BaudRateGenerator(input [28:0] baudrate, input rst, input clk, output bau
   wire [28:0] dInc = d[28] ? (baudrate) : (baudrate - SYS_CLK_RATE);
   
   always @(posedge clk or posedge rst)
-    d <= (rst) ? -baudrate : d+dInc;
+  //in case of rst, start couting after T = 1/(baudrate/2)
+    d <= (rst) ? ((baudrate - SYS_CLK_RATE) >>> 1 ) : d+dInc;
 
   assign baudclk = ~d[28] & ~rst; // this is the BAUD_RATE Hz clock
 endmodule
@@ -43,9 +44,10 @@ module UART(
     end
     else begin
       case (clk_speed_sel)
-        4'b1000: baud_rate <= 9600;
-        4'b0100: baud_rate <= 56000;
-        4'b0010: baud_rate <= 115200;
+        4'b1000: baud_rate <= 4800;
+        4'b0100: baud_rate <= 9600;
+        4'b0010: baud_rate <= 57600;
+        4'b0001: baud_rate <= 115200;
       endcase
     end
   end
@@ -116,7 +118,7 @@ module UART(
     end
   end
 
-  always @(negedge rx_busy)
-    rx_reg <= shifter_rx;  
+  always @(negedge rx_busy or posedge rst)
+    rx_reg <= rst ? 0 : shifter_rx;  
 
 endmodule
